@@ -44,6 +44,7 @@ if(BUILD_STATIC)
   if(MSVC)
     set_source_files_properties(${chipmunk_source_files} PROPERTIES LANGUAGE CXX)
     set_target_properties(chipmunk_static PROPERTIES LINKER_LANGUAGE CXX)
+    target_compile_definitions(chipmunk PUBLIC CHIPMUNK_SHARED)
   endif(MSVC)
   # Sets chipmunk_static to output "libchipmunk.a" not "libchipmunk_static.a"
   set_target_properties(chipmunk_static PROPERTIES OUTPUT_NAME chipmunk)
